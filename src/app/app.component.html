@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  ei chat
+  <span routerLink="home">ei chat</span>
   <ng-container *ngIf="user$ | async as user; else loginButton">
     <button mat-button [matMenuTriggerFor]="userMenu">
       <img width="30" height="30" class="profile-image-toolbar" [src]="user.photoURL ?? 'assets/images/image-placeholder.png'"/>
@@ -14,7 +14,7 @@
     </button>
   </ng-template>
 </mat-toolbar>
-<div class="content">
+<div>
   <router-outlet></router-outlet>
 </div>
 
